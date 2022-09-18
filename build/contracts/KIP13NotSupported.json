@@ -1,0 +1,104 @@
+{
+  "contractName": "KIP13NotSupported",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/root/Proj/Migration-Contract/contracts/klaytn-contracts/mocks/KIP13/KIP13NotSupported.sol\":\"KIP13NotSupported\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[]},\"sources\":{\"/root/Proj/Migration-Contract/contracts/klaytn-contracts/mocks/KIP13/KIP13NotSupported.sol\":{\"keccak256\":\"0x267f462a836b15398e53a160b1bfdc8c4e616f1f8f66bc0a4f464c1a6e11418a\",\"urls\":[\"bzz-raw://b016e7b052d3f92fd961a9a30d65e2711b66a80f1f3995ca005c70b10ca71a9e\",\"dweb:/ipfs/QmXj8f7mShgo9yW3TkkBszXTJHCUPZ5tFRjmgnFYiYrGHb\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603e80601d6000396000f3fe6080604052600080fdfea265627a7a72315820e0137bb7ad423172e246ac7c381d8b9b2b5fd0c64016962635079de60a40bb8464736f6c63430005110032",
+  "deployedBytecode": "0x6080604052600080fdfea265627a7a72315820e0137bb7ad423172e246ac7c381d8b9b2b5fd0c64016962635079de60a40bb8464736f6c63430005110032",
+  "sourceMap": "25:83:16:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:83:16;;;;;;;",
+  "deployedSourceMap": "25:83:16:-;;;;;",
+  "source": "pragma solidity ^0.5.0;\n\ncontract KIP13NotSupported {\n    // solhint-disable-previous-line no-empty-blocks\n}\n",
+  "sourcePath": "/root/Proj/Migration-Contract/contracts/klaytn-contracts/mocks/KIP13/KIP13NotSupported.sol",
+  "ast": {
+    "absolutePath": "/root/Proj/Migration-Contract/contracts/klaytn-contracts/mocks/KIP13/KIP13NotSupported.sol",
+    "exportedSymbols": {
+      "KIP13NotSupported": [
+        1282
+      ]
+    },
+    "id": 1283,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1281,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:16"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1282,
+        "linearizedBaseContracts": [
+          1282
+        ],
+        "name": "KIP13NotSupported",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 1283,
+        "src": "25:83:16"
+      }
+    ],
+    "src": "0:109:16"
+  },
+  "legacyAST": {
+    "absolutePath": "/root/Proj/Migration-Contract/contracts/klaytn-contracts/mocks/KIP13/KIP13NotSupported.sol",
+    "exportedSymbols": {
+      "KIP13NotSupported": [
+        1282
+      ]
+    },
+    "id": 1283,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1281,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:16"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1282,
+        "linearizedBaseContracts": [
+          1282
+        ],
+        "name": "KIP13NotSupported",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 1283,
+        "src": "25:83:16"
+      }
+    ],
+    "src": "0:109:16"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2022-04-05T10:24:04.349Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

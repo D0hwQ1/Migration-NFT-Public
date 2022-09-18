@@ -1,0 +1,868 @@
+{
+  "contractName": "PauserRoleMock",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "PauserAdded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "PauserRemoved",
+      "type": "event"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "addPauser",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "isPauser",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "renouncePauser",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "removePauser",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "onlyPauserMock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"PauserAdded\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"PauserRemoved\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"addPauser\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"isPauser\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"onlyPauserMock\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"account\",\"type\":\"address\"}],\"name\":\"removePauser\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"renouncePauser\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/root/Proj/Migration-Contract/contracts/klaytn-contracts/mocks/PauserRoleMock.sol\":\"PauserRoleMock\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[]},\"sources\":{\"/root/Proj/Migration-Contract/contracts/klaytn-contracts/access/Roles.sol\":{\"keccak256\":\"0xb002c378d7b82a101bd659c341518953ca0919d342c0a400196982c0e7e7bcdb\",\"urls\":[\"bzz-raw://00a788c4631466c220b385bdd100c571d24b2deccd657615cfbcef6cadf669a4\",\"dweb:/ipfs/QmTEwDbjJNxmMNCDMqtuou3dyM8Wtp8Q9NFvn7SAVM7Jf3\"]},\"/root/Proj/Migration-Contract/contracts/klaytn-contracts/access/roles/PauserRole.sol\":{\"keccak256\":\"0xf6826c684d51ca28db5293ce11a54c5cca1c757b6cd32b87613833c65086f995\",\"urls\":[\"bzz-raw://c7567f010ac880ffd52ab8c77da2990cbb2a023b967ca1570bfd78290df7119b\",\"dweb:/ipfs/QmTJQMxPH9ZqzKnaHY2ZDuumL2VQsky5MWkoqoFqHLBomq\"]},\"/root/Proj/Migration-Contract/contracts/klaytn-contracts/mocks/PauserRoleMock.sol\":{\"keccak256\":\"0x794a85febd18a7ad12e6263f35f556b961b53099f42eee8edbd9bd119a492b77\",\"urls\":[\"bzz-raw://481b2b786196ddb8c5f718d289ceec5932e5aad7077f0f72aa26e859a002abf9\",\"dweb:/ipfs/QmQ1dt89S9dBAsztiySd4NzoZ7byVk7dXjJF7ziSNqJ9X7\"]}},\"version\":1}",
+  "bytecode": "0x6080604052610016336001600160e01b0361001b16565b61015b565b61003381600061006a60201b61036d1790919060201c565b6040516001600160a01b038216907f6719d08c1888103bea251a4ed56406bd0c3e69723c8a1686e017e7bbe159b6f890600090a250565b61007d82826001600160e01b036100f416565b156100cf576040805162461bcd60e51b815260206004820152601f60248201527f526f6c65733a206163636f756e7420616c72656164792068617320726f6c6500604482015290519081900360640190fd5b6001600160a01b0316600090815260209190915260409020805460ff19166001179055565b60006001600160a01b03821661013b5760405162461bcd60e51b81526004018080602001828103825260228152602001806106f16022913960400191505060405180910390fd5b506001600160a01b03166000908152602091909152604090205460ff1690565b6105878061016a6000396000f3fe608060405234801561001057600080fd5b50600436106100675760003560e01c80636b2c0f55116100505780636b2c0f55146100bd5780636ef8d66d146100f057806382dc1ec4146100f857610067565b8063329daf901461006c57806346fbf68e14610076575b600080fd5b61007461012b565b005b6100a96004803603602081101561008c57600080fd5b503573ffffffffffffffffffffffffffffffffffffffff1661018b565b604080519115158252519081900360200190f35b610074600480360360208110156100d357600080fd5b503573ffffffffffffffffffffffffffffffffffffffff166101a3565b6100746101af565b6100746004803603602081101561010e57600080fd5b503573ffffffffffffffffffffffffffffffffffffffff166101b8565b6101343361018b565b610189576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260308152602001806104e06030913960400191505060405180910390fd5b565b600061019d818363ffffffff61021f16565b92915050565b6101ac816102ba565b50565b610189336102ba565b6101c13361018b565b610216576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260308152602001806104e06030913960400191505060405180910390fd5b6101ac816102c3565b600073ffffffffffffffffffffffffffffffffffffffff821661028d576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001806105316022913960400191505060405180910390fd5b5073ffffffffffffffffffffffffffffffffffffffff166000908152602091909152604090205460ff1690565b6101ac81610318565b6102d460008263ffffffff61036d16565b60405173ffffffffffffffffffffffffffffffffffffffff8216907f6719d08c1888103bea251a4ed56406bd0c3e69723c8a1686e017e7bbe159b6f890600090a250565b61032960008263ffffffff61043316565b60405173ffffffffffffffffffffffffffffffffffffffff8216907fcd265ebaf09df2871cc7bd4133404a235ba12eff2041bb89d9c714a2621c7c7e90600090a250565b610377828261021f565b156103e357604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601f60248201527f526f6c65733a206163636f756e7420616c72656164792068617320726f6c6500604482015290519081900360640190fd5b73ffffffffffffffffffffffffffffffffffffffff1660009081526020919091526040902080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00166001179055565b61043d828261021f565b610492576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806105106021913960400191505060405180910390fd5b73ffffffffffffffffffffffffffffffffffffffff1660009081526020919091526040902080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0016905556fe506175736572526f6c653a2063616c6c657220646f6573206e6f742068617665207468652050617573657220726f6c65526f6c65733a206163636f756e7420646f6573206e6f74206861766520726f6c65526f6c65733a206163636f756e7420697320746865207a65726f2061646472657373a265627a7a72315820b2c1f211d9e970c5f5bd82fded0eca9aadb76522f904f6b7b6e54a377c4b4c8064736f6c63430005110032526f6c65733a206163636f756e7420697320746865207a65726f2061646472657373",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100675760003560e01c80636b2c0f55116100505780636b2c0f55146100bd5780636ef8d66d146100f057806382dc1ec4146100f857610067565b8063329daf901461006c57806346fbf68e14610076575b600080fd5b61007461012b565b005b6100a96004803603602081101561008c57600080fd5b503573ffffffffffffffffffffffffffffffffffffffff1661018b565b604080519115158252519081900360200190f35b610074600480360360208110156100d357600080fd5b503573ffffffffffffffffffffffffffffffffffffffff166101a3565b6100746101af565b6100746004803603602081101561010e57600080fd5b503573ffffffffffffffffffffffffffffffffffffffff166101b8565b6101343361018b565b610189576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260308152602001806104e06030913960400191505060405180910390fd5b565b600061019d818363ffffffff61021f16565b92915050565b6101ac816102ba565b50565b610189336102ba565b6101c13361018b565b610216576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260308152602001806104e06030913960400191505060405180910390fd5b6101ac816102c3565b600073ffffffffffffffffffffffffffffffffffffffff821661028d576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260228152602001806105316022913960400191505060405180910390fd5b5073ffffffffffffffffffffffffffffffffffffffff166000908152602091909152604090205460ff1690565b6101ac81610318565b6102d460008263ffffffff61036d16565b60405173ffffffffffffffffffffffffffffffffffffffff8216907f6719d08c1888103bea251a4ed56406bd0c3e69723c8a1686e017e7bbe159b6f890600090a250565b61032960008263ffffffff61043316565b60405173ffffffffffffffffffffffffffffffffffffffff8216907fcd265ebaf09df2871cc7bd4133404a235ba12eff2041bb89d9c714a2621c7c7e90600090a250565b610377828261021f565b156103e357604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601f60248201527f526f6c65733a206163636f756e7420616c72656164792068617320726f6c6500604482015290519081900360640190fd5b73ffffffffffffffffffffffffffffffffffffffff1660009081526020919091526040902080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00166001179055565b61043d828261021f565b610492576040517f08c379a00000000000000000000000000000000000000000000000000000000081526004018080602001828103825260218152602001806105106021913960400191505060405180910390fd5b73ffffffffffffffffffffffffffffffffffffffff1660009081526020919091526040902080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0016905556fe506175736572526f6c653a2063616c6c657220646f6573206e6f742068617665207468652050617573657220726f6c65526f6c65733a206163636f756e7420646f6573206e6f74206861766520726f6c65526f6c65733a206163636f756e7420697320746865207a65726f2061646472657373a265627a7a72315820b2c1f211d9e970c5f5bd82fded0eca9aadb76522f904f6b7b6e54a377c4b4c8064736f6c63430005110032",
+  "sourceMap": "67:423:35:-;;;275:22:5;286:10;-1:-1:-1;;;;;275:10:5;:22;:::i;:::-;67:423:35;;737:119:5;793:21;806:7;793:8;:12;;;;;;:21;;;;:::i;:::-;829:20;;-1:-1:-1;;;;;829:20:5;;;;;;;;737:119;:::o;260:175:3:-;337:18;341:4;347:7;-1:-1:-1;;;;;337:3:3;:18;:::i;:::-;336:19;328:63;;;;;-1:-1:-1;;;328:63:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;401:20:3;:11;:20;;;;;;;;;;;:27;;-1:-1:-1;;401:27:3;424:4;401:27;;;260:175::o;779:200::-;851:4;-1:-1:-1;;;;;875:21:3;;867:68;;;;-1:-1:-1;;;867:68:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;952:20:3;:11;:20;;;;;;;;;;;;;;;779:200::o;67:423:35:-;;;;;;;",
+  "deployedSourceMap": "67:423:35:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;67:423:35;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;202:113;;;:::i;:::-;;447:107:5;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;447:107:5;;;;:::i;:::-;;;;;;;;;;;;;;;;;;111:85:35;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;111:85:35;;;;:::i;656:75:5:-;;;:::i;560:90::-;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;560:90:5;;;;:::i;202:113:35:-;350:20:5;359:10;350:8;:20::i;:::-;342:81;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;202:113:35:o;447:107:5:-;503:4;526:21;503:4;539:7;526:21;:12;:21;:::i;:::-;519:28;447:107;-1:-1:-1;;447:107:5:o;111:85:35:-;167:22;181:7;167:13;:22::i;:::-;111:85;:::o;656:75:5:-;699:25;713:10;699:13;:25::i;560:90::-;350:20;359:10;350:8;:20::i;:::-;342:81;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;624:19;635:7;624:10;:19::i;779:200:3:-;851:4;875:21;;;867:68;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;952:20:3;;:11;:20;;;;;;;;;;;;;;;779:200::o;394:94:35:-;453:28;473:7;453:19;:28::i;737:119:5:-;793:21;:8;806:7;793:21;:12;:21;:::i;:::-;829:20;;;;;;;;;;;737:119;:::o;862:127::-;921:24;:8;937:7;921:24;:15;:24;:::i;:::-;960:22;;;;;;;;;;;862:127;:::o;260:175:3:-;337:18;341:4;347:7;337:3;:18::i;:::-;336:19;328:63;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;401:20;;:11;:20;;;;;;;;;;;:27;;;;424:4;401:27;;;260:175::o;510:180::-;589:18;593:4;599:7;589:3;:18::i;:::-;581:64;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;655:20;;678:5;655:20;;;;;;;;;;;:28;;;;;;510:180::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"../access/roles/PauserRole.sol\";\n\ncontract PauserRoleMock is PauserRole {\n    function removePauser(address account) public {\n        _removePauser(account);\n    }\n\n    function onlyPauserMock() public view onlyPauser {\n        // solhint-disable-previous-line no-empty-blocks\n    }\n\n    // Causes a compilation error if super._removePauser is not internal\n    function _removePauser(address account) internal {\n        super._removePauser(account);\n    }\n}\n",
+  "sourcePath": "/root/Proj/Migration-Contract/contracts/klaytn-contracts/mocks/PauserRoleMock.sol",
+  "ast": {
+    "absolutePath": "/root/Proj/Migration-Contract/contracts/klaytn-contracts/mocks/PauserRoleMock.sol",
+    "exportedSymbols": {
+      "PauserRoleMock": [
+        2146
+      ]
+    },
+    "id": 2147,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2114,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:35"
+      },
+      {
+        "absolutePath": "/root/Proj/Migration-Contract/contracts/klaytn-contracts/access/roles/PauserRole.sol",
+        "file": "../access/roles/PauserRole.sol",
+        "id": 2115,
+        "nodeType": "ImportDirective",
+        "scope": 2147,
+        "sourceUnit": 462,
+        "src": "25:40:35",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2116,
+              "name": "PauserRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 461,
+              "src": "94:10:35",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_PauserRole_$461",
+                "typeString": "contract PauserRole"
+              }
+            },
+            "id": 2117,
+            "nodeType": "InheritanceSpecifier",
+            "src": "94:10:35"
+          }
+        ],
+        "contractDependencies": [
+          461
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2146,
+        "linearizedBaseContracts": [
+          2146,
+          461
+        ],
+        "name": "PauserRoleMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2126,
+              "nodeType": "Block",
+              "src": "157:39:35",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2123,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2119,
+                        "src": "181:7:35",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 2122,
+                      "name": "_removePauser",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        2145
+                      ],
+                      "referencedDeclaration": 2145,
+                      "src": "167:13:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 2124,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "167:22:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2125,
+                  "nodeType": "ExpressionStatement",
+                  "src": "167:22:35"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2127,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removePauser",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2120,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2119,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2127,
+                  "src": "133:15:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2118,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "133:7:35",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "132:17:35"
+            },
+            "returnParameters": {
+              "id": 2121,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "157:0:35"
+            },
+            "scope": 2146,
+            "src": "111:85:35",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2132,
+              "nodeType": "Block",
+              "src": "251:64:35",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 2133,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 2130,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2129,
+                  "name": "onlyPauser",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 394,
+                  "src": "240:10:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "240:10:35"
+              }
+            ],
+            "name": "onlyPauserMock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2128,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "225:2:35"
+            },
+            "returnParameters": {
+              "id": 2131,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "251:0:35"
+            },
+            "scope": 2146,
+            "src": "202:113:35",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2144,
+              "nodeType": "Block",
+              "src": "443:45:35",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2141,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2135,
+                        "src": "473:7:35",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2138,
+                        "name": "super",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6840,
+                        "src": "453:5:35",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_super$_PauserRoleMock_$2146",
+                          "typeString": "contract super PauserRoleMock"
+                        }
+                      },
+                      "id": 2140,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "_removePauser",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 460,
+                      "src": "453:19:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 2142,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "453:28:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2143,
+                  "nodeType": "ExpressionStatement",
+                  "src": "453:28:35"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2145,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_removePauser",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2136,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2135,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2145,
+                  "src": "417:15:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2134,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "417:7:35",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "416:17:35"
+            },
+            "returnParameters": {
+              "id": 2137,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "443:0:35"
+            },
+            "scope": 2146,
+            "src": "394:94:35",
+            "stateMutability": "nonpayable",
+            "superFunction": 460,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 2147,
+        "src": "67:423:35"
+      }
+    ],
+    "src": "0:491:35"
+  },
+  "legacyAST": {
+    "absolutePath": "/root/Proj/Migration-Contract/contracts/klaytn-contracts/mocks/PauserRoleMock.sol",
+    "exportedSymbols": {
+      "PauserRoleMock": [
+        2146
+      ]
+    },
+    "id": 2147,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2114,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:35"
+      },
+      {
+        "absolutePath": "/root/Proj/Migration-Contract/contracts/klaytn-contracts/access/roles/PauserRole.sol",
+        "file": "../access/roles/PauserRole.sol",
+        "id": 2115,
+        "nodeType": "ImportDirective",
+        "scope": 2147,
+        "sourceUnit": 462,
+        "src": "25:40:35",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2116,
+              "name": "PauserRole",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 461,
+              "src": "94:10:35",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_PauserRole_$461",
+                "typeString": "contract PauserRole"
+              }
+            },
+            "id": 2117,
+            "nodeType": "InheritanceSpecifier",
+            "src": "94:10:35"
+          }
+        ],
+        "contractDependencies": [
+          461
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2146,
+        "linearizedBaseContracts": [
+          2146,
+          461
+        ],
+        "name": "PauserRoleMock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 2126,
+              "nodeType": "Block",
+              "src": "157:39:35",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2123,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2119,
+                        "src": "181:7:35",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 2122,
+                      "name": "_removePauser",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        2145
+                      ],
+                      "referencedDeclaration": 2145,
+                      "src": "167:13:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 2124,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "167:22:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2125,
+                  "nodeType": "ExpressionStatement",
+                  "src": "167:22:35"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2127,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "removePauser",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2120,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2119,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2127,
+                  "src": "133:15:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2118,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "133:7:35",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "132:17:35"
+            },
+            "returnParameters": {
+              "id": 2121,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "157:0:35"
+            },
+            "scope": 2146,
+            "src": "111:85:35",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2132,
+              "nodeType": "Block",
+              "src": "251:64:35",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 2133,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 2130,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 2129,
+                  "name": "onlyPauser",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 394,
+                  "src": "240:10:35",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "240:10:35"
+              }
+            ],
+            "name": "onlyPauserMock",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2128,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "225:2:35"
+            },
+            "returnParameters": {
+              "id": 2131,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "251:0:35"
+            },
+            "scope": 2146,
+            "src": "202:113:35",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 2144,
+              "nodeType": "Block",
+              "src": "443:45:35",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 2141,
+                        "name": "account",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 2135,
+                        "src": "473:7:35",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 2138,
+                        "name": "super",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 6840,
+                        "src": "453:5:35",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_super$_PauserRoleMock_$2146",
+                          "typeString": "contract super PauserRoleMock"
+                        }
+                      },
+                      "id": 2140,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "_removePauser",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 460,
+                      "src": "453:19:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 2142,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "453:28:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 2143,
+                  "nodeType": "ExpressionStatement",
+                  "src": "453:28:35"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 2145,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "_removePauser",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 2136,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2135,
+                  "name": "account",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2145,
+                  "src": "417:15:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2134,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "417:7:35",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "416:17:35"
+            },
+            "returnParameters": {
+              "id": 2137,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "443:0:35"
+            },
+            "scope": 2146,
+            "src": "394:94:35",
+            "stateMutability": "nonpayable",
+            "superFunction": 460,
+            "visibility": "internal"
+          }
+        ],
+        "scope": 2147,
+        "src": "67:423:35"
+      }
+    ],
+    "src": "0:491:35"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2022-04-05T10:24:04.385Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

@@ -1,0 +1,445 @@
+{
+  "contractName": "KIP13Mock",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "registerInterface",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.17+commit.d19bba13\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"registerInterface\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{\"supportsInterface(bytes4)\":{\"details\":\"See `IKIP13.supportsInterface`.     * Time complexity O(1), guaranteed to always use less than 30 000 gas.\"}}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/root/Proj/Migration-Contract/contracts/klaytn-contracts/mocks/KIP13Mock.sol\":\"KIP13Mock\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":999999},\"remappings\":[]},\"sources\":{\"/root/Proj/Migration-Contract/contracts/klaytn-contracts/introspection/IKIP13.sol\":{\"keccak256\":\"0xf7415711dbec40bc633af7d8cb5c3c0bc3d1ed97fd8c13f795a03eb3073ea219\",\"urls\":[\"bzz-raw://c3583b6a39425cc359116200869b24b50c2293c6e68d09c4d4b804861b431ae0\",\"dweb:/ipfs/QmWZWD7oEtz7QbM5AmUtrbZpDVkxzeX8JGcVkUVmvRRaVa\"]},\"/root/Proj/Migration-Contract/contracts/klaytn-contracts/introspection/KIP13.sol\":{\"keccak256\":\"0x84681701e79f53ba1e9660b6a130bba31880d66cee996ab7d5567d239155c6da\",\"urls\":[\"bzz-raw://f35082a91314003570fca4b2426cd3f79db0eb846a456842db4a11f473db924d\",\"dweb:/ipfs/QmYdHAyrXSKjiDxji2L7bTpuPSSqjkwaKT7WM98Yrcy8KD\"]},\"/root/Proj/Migration-Contract/contracts/klaytn-contracts/mocks/KIP13Mock.sol\":{\"keccak256\":\"0x8643bb9c3d613a4bb5576189266198cbc6d005a11d55aafdcbbc179c7efa3ff2\",\"urls\":[\"bzz-raw://cc3b70f44b3ce08a420958b9953f9a9e58508ba921cb7d4c0ca4063252980e68\",\"dweb:/ipfs/QmYpRfAxVyS9EUqdB89sCZYQ3oiADVtPNDtjTy1BVWU9ew\"]}},\"version\":1}",
+  "bytecode": "0x608060405261001d6301ffc9a760e01b6001600160e01b0361002216565b6100a6565b6001600160e01b03198082161415610081576040805162461bcd60e51b815260206004820152601b60248201527f4b495031333a20696e76616c696420696e746572666163652069640000000000604482015290519081900360640190fd5b6001600160e01b0319166000908152602081905260409020805460ff19166001179055565b610233806100b56000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c806301ffc9a71461003b578063214cdb801461008e575b600080fd5b61007a6004803603602081101561005157600080fd5b50357fffffffff00000000000000000000000000000000000000000000000000000000166100cf565b604080519115158252519081900360200190f35b6100cd600480360360208110156100a457600080fd5b50357fffffffff0000000000000000000000000000000000000000000000000000000016610106565b005b7fffffffff000000000000000000000000000000000000000000000000000000001660009081526020819052604090205460ff1690565b61010f81610112565b50565b7fffffffff0000000000000000000000000000000000000000000000000000000080821614156101a357604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601b60248201527f4b495031333a20696e76616c696420696e746572666163652069640000000000604482015290519081900360640190fd5b7fffffffff0000000000000000000000000000000000000000000000000000000016600090815260208190526040902080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0016600117905556fea265627a7a72315820349e39c72a95a07870274f351bf01a49cfd8ac9dbdf923a890727ee0a462d7e764736f6c63430005110032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c806301ffc9a71461003b578063214cdb801461008e575b600080fd5b61007a6004803603602081101561005157600080fd5b50357fffffffff00000000000000000000000000000000000000000000000000000000166100cf565b604080519115158252519081900360200190f35b6100cd600480360360208110156100a457600080fd5b50357fffffffff0000000000000000000000000000000000000000000000000000000016610106565b005b7fffffffff000000000000000000000000000000000000000000000000000000001660009081526020819052604090205460ff1690565b61010f81610112565b50565b7fffffffff0000000000000000000000000000000000000000000000000000000080821614156101a357604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601b60248201527f4b495031333a20696e76616c696420696e746572666163652069640000000000604482015290519081900360640190fd5b7fffffffff0000000000000000000000000000000000000000000000000000000016600090815260208190526040902080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff0016600117905556fea265627a7a72315820349e39c72a95a07870274f351bf01a49cfd8ac9dbdf923a890727ee0a462d7e764736f6c63430005110032",
+  "sourceMap": "63:138:18:-;;;712:39:8;-1:-1:-1;;;;;;;;712:18:8;:39;:::i;:::-;63:138:18;;1431:189:8;-1:-1:-1;;;;;;1506:25:8;;;;;1498:65;;;;;-1:-1:-1;;;1498:65:8;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;;;1573:33:8;:20;:33;;;;;;;;;;:40;;-1:-1:-1;;1573:40:8;1609:4;1573:40;;;1431:189::o;63:138:18:-;;;;;;;",
+  "deployedSourceMap": "63:138:18:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;63:138:18;;;;;;;;;;;;;;;;;;;;;;;;907:133:8;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;907:133:8;;;;:::i;:::-;;;;;;;;;;;;;;;;;;97:102:18;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;-1:-1;97:102:18;;;;:::i;:::-;;907:133:8;1000:33;;977:4;1000:33;;;;;;;;;;;;;;907:133::o;97:102:18:-;161:31;180:11;161:18;:31::i;:::-;97:102;:::o;1431:189:8:-;1506:25;;;;;;1498:65;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1573:33;;:20;:33;;;;;;;;;;:40;;;;1609:4;1573:40;;;1431:189::o",
+  "source": "pragma solidity ^0.5.0;\n\nimport \"../introspection/KIP13.sol\";\n\ncontract KIP13Mock is KIP13 {\n    function registerInterface(bytes4 interfaceId) public {\n        _registerInterface(interfaceId);\n    }\n}\n",
+  "sourcePath": "/root/Proj/Migration-Contract/contracts/klaytn-contracts/mocks/KIP13Mock.sol",
+  "ast": {
+    "absolutePath": "/root/Proj/Migration-Contract/contracts/klaytn-contracts/mocks/KIP13Mock.sol",
+    "exportedSymbols": {
+      "KIP13Mock": [
+        1348
+      ]
+    },
+    "id": 1349,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1334,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:18"
+      },
+      {
+        "absolutePath": "/root/Proj/Migration-Contract/contracts/klaytn-contracts/introspection/KIP13.sol",
+        "file": "../introspection/KIP13.sol",
+        "id": 1335,
+        "nodeType": "ImportDirective",
+        "scope": 1349,
+        "sourceUnit": 573,
+        "src": "25:36:18",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1336,
+              "name": "KIP13",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 572,
+              "src": "85:5:18",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_KIP13_$572",
+                "typeString": "contract KIP13"
+              }
+            },
+            "id": 1337,
+            "nodeType": "InheritanceSpecifier",
+            "src": "85:5:18"
+          }
+        ],
+        "contractDependencies": [
+          520,
+          572
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1348,
+        "linearizedBaseContracts": [
+          1348,
+          572,
+          520
+        ],
+        "name": "KIP13Mock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1346,
+              "nodeType": "Block",
+              "src": "151:48:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1343,
+                        "name": "interfaceId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1339,
+                        "src": "180:11:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      ],
+                      "id": 1342,
+                      "name": "_registerInterface",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 571,
+                      "src": "161:18:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_bytes4_$returns$__$",
+                        "typeString": "function (bytes4)"
+                      }
+                    },
+                    "id": 1344,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "161:31:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1345,
+                  "nodeType": "ExpressionStatement",
+                  "src": "161:31:18"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1347,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "registerInterface",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1340,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1339,
+                  "name": "interfaceId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1347,
+                  "src": "124:18:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 1338,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "124:6:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "123:20:18"
+            },
+            "returnParameters": {
+              "id": 1341,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "151:0:18"
+            },
+            "scope": 1348,
+            "src": "97:102:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1349,
+        "src": "63:138:18"
+      }
+    ],
+    "src": "0:202:18"
+  },
+  "legacyAST": {
+    "absolutePath": "/root/Proj/Migration-Contract/contracts/klaytn-contracts/mocks/KIP13Mock.sol",
+    "exportedSymbols": {
+      "KIP13Mock": [
+        1348
+      ]
+    },
+    "id": 1349,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1334,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:18"
+      },
+      {
+        "absolutePath": "/root/Proj/Migration-Contract/contracts/klaytn-contracts/introspection/KIP13.sol",
+        "file": "../introspection/KIP13.sol",
+        "id": 1335,
+        "nodeType": "ImportDirective",
+        "scope": 1349,
+        "sourceUnit": 573,
+        "src": "25:36:18",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1336,
+              "name": "KIP13",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 572,
+              "src": "85:5:18",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_KIP13_$572",
+                "typeString": "contract KIP13"
+              }
+            },
+            "id": 1337,
+            "nodeType": "InheritanceSpecifier",
+            "src": "85:5:18"
+          }
+        ],
+        "contractDependencies": [
+          520,
+          572
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1348,
+        "linearizedBaseContracts": [
+          1348,
+          572,
+          520
+        ],
+        "name": "KIP13Mock",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 1346,
+              "nodeType": "Block",
+              "src": "151:48:18",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1343,
+                        "name": "interfaceId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1339,
+                        "src": "180:11:18",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      ],
+                      "id": 1342,
+                      "name": "_registerInterface",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 571,
+                      "src": "161:18:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_bytes4_$returns$__$",
+                        "typeString": "function (bytes4)"
+                      }
+                    },
+                    "id": 1344,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "161:31:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 1345,
+                  "nodeType": "ExpressionStatement",
+                  "src": "161:31:18"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1347,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "registerInterface",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1340,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1339,
+                  "name": "interfaceId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1347,
+                  "src": "124:18:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 1338,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "124:6:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "123:20:18"
+            },
+            "returnParameters": {
+              "id": 1341,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "151:0:18"
+            },
+            "scope": 1348,
+            "src": "97:102:18",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1349,
+        "src": "63:138:18"
+      }
+    ],
+    "src": "0:202:18"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.17+commit.d19bba13.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2022-04-05T10:24:04.351Z",
+  "devdoc": {
+    "methods": {
+      "supportsInterface(bytes4)": {
+        "details": "See `IKIP13.supportsInterface`.     * Time complexity O(1), guaranteed to always use less than 30 000 gas."
+      }
+    }
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
